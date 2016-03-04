@@ -8,10 +8,12 @@ myApp.controller('TaskController', ['$scope', '$http', function($scope, $http) {
         var task = {
             task: $scope.task,
             complete: $scope.complete
+
         };
 
         $http.post('/task', task).then(function(response) {
             getTask();
+            $scope.task = '';
         });
     };
 
