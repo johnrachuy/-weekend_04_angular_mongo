@@ -1,3 +1,7 @@
-.todo .remove {
+.todo {
+    border:1px solid black;
+}
+
+.complete {
     border:1px solid black;
 }

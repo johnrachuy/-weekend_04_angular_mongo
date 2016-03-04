@@ -105,7 +105,6 @@ app.delete('/task/:id', function(req, res) {
     });
 });
 
-
 // Serve back static files
 app.use(express.static('public'));
 app.use(express.static('public/views'));

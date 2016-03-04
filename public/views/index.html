@@ -12,10 +12,9 @@
 
 <body ng-app="myApp">
 <div id="container" ng-controller="TaskController">
-    <header>My Awesome List</header>
+    <header><h1>My Awesome List</h1></header>
 
     <form id="task-form">
-        <!--<label for="task">New Task:</label>-->
         <input type="text" ng-model="task" id="task" placeholder="New Task" />
 
         <button ng-click="newTask()">Add Task</button>
@@ -25,12 +24,13 @@
     <div class="todo">
         <div ng-repeat="task in allTasks">
             <ul>
-                <li>{{task.task}}<button ng-click="completeTask($index)">Complete</button><button ng-click="removeTask()">Delete</button></li>
+                <li>{{task.task}}<button ng-click="completeTask($index)">Complete</button><button ng-click="delete(task._id)">Delete</button></li>
             </ul>
         </div>
     </div>
+
     <h2>Completed tasks:</h2>
-    <div>
+    <div class="complete">
         <div ng-repeat="complete in completedTasks">
             <ul>
                 <li>{{complete.task}}<button ng-click="delete(complete._id)">Delete</button></li>
